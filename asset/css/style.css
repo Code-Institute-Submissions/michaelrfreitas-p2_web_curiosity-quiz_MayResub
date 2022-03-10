@@ -1,0 +1,52 @@
+html {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to right bottom, #3daf0a, #00b870, #00bcb6, #00bae4, #00b3f4, #3ca9ff, #6f9cff, #9f8bfd, #e16bdc, #ff46a4, #ff3860, #ff5600);
+    height:100%
+}
+
+header {
+    padding: 1em;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+    padding: 1em;
+}
+
+#text {
+    text-align: justify;
+    padding: 1em;
+}
+
+button {
+    padding: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    border-style: solid;
+    border-color: black;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+footer {
+    padding: 1em;
+    text-align: center;
+}
+
+.f-icon {
+    padding: 1em;
+    width: 40px;
+    height: inherit;
+}
+
+#copyright {
+    padding: 0;
+    width: 15px;
+    height: inherit;
+}
