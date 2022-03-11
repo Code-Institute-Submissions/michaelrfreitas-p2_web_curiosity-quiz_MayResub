@@ -1,0 +1,162 @@
+[
+ {
+   "Number": 1,
+   "Questions": "What is the oldest civilization in the world?",
+   "A": "Mesopotamian",
+   "B": "Egyptian",
+   "C": "Maya",
+   "Correct": "A"
+ },
+ {
+   "Number": 2,
+   "Questions": "What was the first monarchy in the world?",
+   "A": "Sumerian",
+   "B": "Egypt",
+   "C": "Japan",
+   "Correct": "B"
+ },
+ {
+   "Number": 3,
+   "Questions": "What is the biggest country in the world?",
+   "A": "China",
+   "B": "Canada",
+   "C": "Russia",
+   "Correct": "C"
+ },
+ {
+   "Number": 4,
+   "Questions": "What is the most populated city in the world?",
+   "A": "Delhi",
+   "B": "Tokyo",
+   "C": "Shanghai",
+   "Correct": "B"
+ },
+ {
+   "Number": 5,
+   "Questions": "What is the biggest continent in the world?",
+   "A": "Asia",
+   "B": "Africa",
+   "C": "America",
+   "Correct": "A"
+ },
+ {
+   "Number": 6,
+   "Questions": "What is the most visited 7 Wonders of the World?",
+   "A": "Yucatan",
+   "B": "Colosseum",
+   "C": "Taj Mahal",
+   "Correct": "C"
+ },
+ {
+   "Number": 7,
+   "Questions": "What is the place with the most snakes in the world?",
+   "A": "Ilha da Queimada Grande in Brazil",
+   "B": "Manitoba in Canada",
+   "C": "Sumatra in Indonesia",
+   "Correct": "A"
+ },
+ {
+   "Number": 8,
+   "Questions": "Which is the oldest 7 wonders of the world?",
+   "A": "Temple of Artemis at Ephesus",
+   "B": "Great Pyramid of Giza",
+   "C": "Statue of Zeus at Olympia",
+   "Correct": "B"
+ },
+ {
+   "Number": 9,
+   "Questions": "What is the largest organ in human body? ",
+   "A": "Liver",
+   "B": "Brain",
+   "C": "Skin",
+   "Correct": "C"
+ },
+ {
+   "Number": 10,
+   "Questions": "What is organ cannot be transplanted?",
+   "A": "Brain",
+   "B": "Liver",
+   "C": "Skin",
+   "Correct": "A"
+ },
+ {
+   "Number": 11,
+   "Questions": "What is the country more won the FIFA world cup?",
+   "A": "Brazil",
+   "B": "Italy",
+   "C": "Germany",
+   "Correct": "A"
+ },
+ {
+   "Number": 12,
+   "Questions": "What is the world's largest active volcano?",
+   "A": "Mauna Kea",
+   "B": "Ojos del Salado",
+   "C": "Mauna Loa",
+   "Correct": "C"
+ },
+ {
+   "Number": 13,
+   "Questions": "What is the highest mountain in the world?",
+   "A": "K2",
+   "B": "MOUNT EVEREST",
+   "C": "KANGCHENJUNGA",
+   "Correct": "B"
+ },
+ {
+   "Number": 14,
+   "Questions": "What is the most danger place in the world?",
+   "A": "Syria",
+   "B": "Snake Island, Brazil",
+   "C": "Danakil Desert, East Africa",
+   "Correct": "A"
+ },
+ {
+   "Number": 15,
+   "Questions": "What is the largest biome on earth?",
+   "A": "Taiga Boreal Forest",
+   "B": "Tropical Rain Forest",
+   "C": "Tundra",
+   "Correct": "A"
+ },
+ {
+   "Number": 16,
+   "Questions": "What is the largest biome on planet Earth?",
+   "A": "Marine",
+   "B": "Taiga Boreal Forest",
+   "C": "Tundra",
+   "Correct": "A"
+ },
+ {
+   "Number": 17,
+   "Questions": "What is the country with the lowest Human Development Index (HDI)?",
+   "A": "Niger",
+   "B": "Central African Republic",
+   "C": "Chad",
+   "Correct": "A"
+ },
+ {
+   "Number": 18,
+   "Questions": "Who breastfed the twins Romulo and Remo?",
+   "A": "Dog",
+   "B": "Wolf",
+   "C": "Cow",
+   "Correct": "B"
+ },
+ {
+   "Number": 19,
+   "Questions": "Which planet lost the status of a planet?",
+   "A": "Mercury",
+   "B": "Venus",
+   "C": "Pluto",
+   "Correct": "C"
+ },
+ {
+   "Number": 20,
+   "Questions": "Which is the biggest planet in our solar system?",
+   "A": "Saturn",
+   "B": "Jupiter",
+   "C": "Uranus",
+   "Correct": "B"
+ }
+]
