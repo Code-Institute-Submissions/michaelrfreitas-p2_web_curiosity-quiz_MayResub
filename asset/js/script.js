@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 let answer = this.getAttribute("data-type");
                 number++;
                 checkAnswer(answer, number);
+            } else if (this.getAttribute("data-type") === "restart" ) {
+                alert ("You are starting a new quiz!")
+            } else {
+                alert("Are you sure that you want to end the quiz?");
+                displayResult();
             }
         });
     }
@@ -90,38 +95,51 @@ async function startQuiz() {
 
 function checkAnswer(answer, number) {
     console.log(number);
-    if (number < 10) {
+    if (number <= 10) {
         if (answer === sessionStorage.getItem("correct")) {
-            addScore();
+            addScore(number);
         } else {
-            reduceScore();
+            reduceScore(number);
         }
     } else {
-        let oldScore = parseInt(document.getElementById("score").innerText);
-        sessionStorage.setItem("oldScore", oldScore);
         displayResult();
     }
 };
 
-function addScore() {
+function addScore(number) {
     let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = oldScore + 10;
-    startQuiz();
+    let score = oldScore + 10;
+    document.getElementById("score").innerText = score;
+    if (number < 10) {
+        startQuiz();
+    } else {
+        sessionStorage.setItem("score", score);
+        displayResult();
+    }
 };
 
-function reduceScore() {
+function reduceScore(number) {
     let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = oldScore - 5;
-    startQuiz();
+    let score = oldScore - 5;
+    document.getElementById("score").innerText = score;
+    if (number < 10) {
+        startQuiz();
+    } else {
+        sessionStorage.setItem("score", score);
+        displayResult();
+    }
 };
 
 function timeAnswer() {
 
 };
 
-function displayResult() {
-    window.location.href = "./result.html?name=" + sessionStorage.getItem("name") + "?score=" + sessionStorage.getItem("oldScore");
-    document.getElementById("name").textContent = sessionStorage.getItem("name");
-    document.getElementById("score").textContent = sessionStorage.getItem("oldScore");
-    sessionStorage.clear;
+async function displayResult() {
+    const name = sessionStorage.getItem("name");
+    const score = sessionStorage.getItem("score");
+    const nextURL = './result.html?nameP=' + name + '?scoreP=' + score;
+    window.location.assign(nextURL);
+    document.getElementById("nameP").textContent = name;
+    document.getElementById("scoreP").textContent = score;
+    
 };
