@@ -1,23 +1,37 @@
+let time = 15;
+let number = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
-    let number = 0;
+
     for (let button of buttons) {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 let name = document.getElementById("name").value;
+                sessionStorage.removeItem("endScore");
+                sessionStorage.removeItem("endCorrect");
+                sessionStorage.removeItem("endIncorrect");
+                sessionStorage.removeItem("pastQ");
                 nextPage(name);
             } else if (this.getAttribute("data-type") === "A" || this.getAttribute("data-type") === "B" || this.getAttribute("data-type") === "C") {
                 let answer = this.getAttribute("data-type");
                 number++;
-                checkAnswer(answer, number);
-            } else if (this.getAttribute("data-type") === "restart" ) {
-                alert ("You are starting a new quiz!")
+                checkAnswer(answer);
+            } else if (this.getAttribute("data-type") === "restart") {
+                alert("You are starting a new quiz!");
+                sessionStorage.removeItem("endScore");
+                sessionStorage.removeItem("endCorrect");
+                sessionStorage.removeItem("endIncorrect");
+                sessionStorage.removeItem("pastQ");
+                nextPage(sessionStorage.getItem("name"));
             } else {
                 alert("Are you sure that you want to end the quiz?");
                 displayResult();
             }
         });
     }
+    setInterval(timeAnswer, 1000);
+    startQuiz();
 });
 
 async function getQuestions() {
@@ -27,20 +41,32 @@ async function getQuestions() {
     } catch (error) {
         console.log(error);
     }
-};
-
-async function nextPage(name) {
-    const nextURL = './quiz.html';
-    window.location.assign(nextURL);
-    sessionStorage.setItem("name", name)
 }
 
-startQuiz();
+function nextPage(name) {
+    const nextURL = './quiz.html';
+    document.location.assign(nextURL);
+    sessionStorage.setItem("name", name);
+}
 
 async function startQuiz() {
     if (document.getElementById("question") != null) {
         let index = Math.floor(Math.random() * 20);
+        let pastQ = [];
+        if (sessionStorage.getItem("pastQ") != null) {
+            pastQ = JSON.parse(sessionStorage.getItem("pastQ"));
+        }
+        pastQ.forEach(e => {
+            if (e === index) {
+                index = Math.floor(Math.random() * 20);
+            }
+        });
+
+        pastQ.push(index);
+        sessionStorage.setItem("pastQ", JSON.stringify(pastQ));
         let questions = await getQuestions();
+        let num = document.getElementById("number").innerText;
+        document.getElementById("number").innerText = ++num;
         document.getElementById("name").textContent = sessionStorage.getItem("name");
         document.getElementById("question").textContent = questions[index].Questions;
         let correct = questions[index].Correct;
@@ -91,55 +117,91 @@ async function startQuiz() {
         }
         sessionStorage.setItem("correct", correct);
     }
-};
+    displayEndScore();
+    const name = sessionStorage.getItem("name");
+    document.getElementById("name").textContent = name;
+}
 
-function checkAnswer(answer, number) {
-    console.log(number);
+function checkAnswer(answer) {
     if (number <= 10) {
         if (answer === sessionStorage.getItem("correct")) {
-            addScore(number);
+            addScore();
         } else {
-            reduceScore(number);
+            reduceScore();
         }
     } else {
         displayResult();
     }
-};
+}
 
-function addScore(number) {
+function addScore() {
     let oldScore = parseInt(document.getElementById("score").innerText);
+    let oldCount = parseInt(document.getElementById("correct").innerText);
     let score = oldScore + 10;
+    time = time + 15;
+    document.getElementById("correct").innerText = ++oldCount;
     document.getElementById("score").innerText = score;
     if (number < 10) {
         startQuiz();
+        sessionStorage.setItem("endScore", score);
+        sessionStorage.setItem("endCorrect", oldCount);
     } else {
-        sessionStorage.setItem("score", score);
+        sessionStorage.setItem("endScore", score);
+        sessionStorage.setItem("endCorrect", oldCount);
         displayResult();
     }
-};
+}
 
-function reduceScore(number) {
+function reduceScore() {
     let oldScore = parseInt(document.getElementById("score").innerText);
+    let oldCount = parseInt(document.getElementById("incorrect").innerText);
     let score = oldScore - 5;
+    time = 15;
+    document.getElementById("incorrect").innerText = ++oldCount;
     document.getElementById("score").innerText = score;
     if (number < 10) {
         startQuiz();
+        sessionStorage.setItem("endScore", score);
+        sessionStorage.setItem("endIncorrect", oldCount);
     } else {
-        sessionStorage.setItem("score", score);
+        sessionStorage.setItem("endScore", score);
+        sessionStorage.setItem("endIncorrect", oldCount);
         displayResult();
     }
-};
+}
 
 function timeAnswer() {
+    if (document.getElementById("time") != null) {
+        let seconds = time;
 
-};
+        seconds = seconds < 10 ? '0' + seconds : seconds;
 
-async function displayResult() {
-    const name = sessionStorage.getItem("name");
-    const score = sessionStorage.getItem("score");
-    const nextURL = './result.html?nameP=' + name + '?scoreP=' + score;
-    window.location.assign(nextURL);
-    document.getElementById("nameP").textContent = name;
-    document.getElementById("scoreP").textContent = score;
-    
-};
+        document.getElementById("time").innerHTML = `00:${seconds}`;
+        time--;
+
+        if (seconds < 1) {
+            let answer = 0;
+            time = 15;
+            number++;
+            checkAnswer(answer);
+        } 
+        console.log("time: "+ time);
+        console.log("second: " + seconds);
+    }
+}
+
+function displayResult() {
+    const nextURL = './result.html';
+    return window.location.assign(nextURL);
+}
+
+function displayEndScore() {
+    if (document.getElementById("endScore") != null) {
+        const endScore = sessionStorage.getItem("endScore");
+        const endCorrect = sessionStorage.getItem("endCorrect");
+        const endIncorrect = sessionStorage.getItem("endIncorrect");
+        document.getElementById("endScore").innerText = endScore;
+        document.getElementById("endCorrect").innerText = endCorrect;
+        document.getElementById("endIncorrect").innerText = endIncorrect;
+    }
+}
