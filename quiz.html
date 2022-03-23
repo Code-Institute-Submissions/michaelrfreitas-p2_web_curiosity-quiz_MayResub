@@ -18,17 +18,23 @@
     <hr>
     <main>
         <div class="score">
-            <label for="name">Player name: <span id="name"></span></label>
+            <label for="name">Player name: <b><span id="name"></span></b></label>
         </div>
-        <div id="question"></div>
+        <div>
+        <h2><span id="number">0</span> <span id="question"></span></h2>
+    </div>
         <div id="answer">
             <button class="img" data-type="A"><img id="img_a"><br><span id="text_a"></span></button>
             <button class="img" data-type="B"><img id="img_b"><br><span id="text_b"></span></button>
             <button class="img" data-type="C"><img id="img_c"><br><span id="text_c"></span></button>
         </div>
         <div class="score">
-            <label for="score">Score: <span id="score">0</span></label>
-            <label for="time">Time: <span id="time">0</span></label>
+            <label for="score">Score: <b><span id="score">0</span></b></label>
+            <label for="time">Time: <b><span id="time"></span></b></label>
+        </div>
+        <div class="count">
+            <label for="name">Correct: <b><span id="correct">0</span></b></label>
+            <label for="name">Incorrect: <b><span id="incorrect">0</span></b></label>
         </div>
         <div class="center">
             <button data-type="end">End</button>
