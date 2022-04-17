@@ -17,35 +17,49 @@
     </header>
     <hr>
     <main>
-        <form>
+            <div class="table">
+                <table>
+                    <tr>
+                        <th>Player name</th>
+                        <th>Correct</th>
+                        <th>Incorrect</th>
+                        <th>Score</th>
+                    </tr>
+                    <tr>
+                        <td id="name"></td>
+                        <td id="endCorrect"></td>
+                        <td id="endIncorrect"></td>
+                        <td id="endScore"></td>
+                    </tr>
+                </table>
+            </div>
             <div class="center">
-                <label for="name"><b>Player name: <%=name=></b></label>
-                </div>
-                
-                <div class="center">
-                <button type="submit">End</button>
-                </div>
-            </form>
-        </main>
-        <hr>
-        <footer>
-            <a href="https://facebook.com">
-                <img class="f-icon" src="./asset/media/5305153_fb_facebook_facebook logo_icon.png" alt="Facebook icon" />
-            </a>
-            <a href="https://youtube.com">
-                <img class="f-icon" src="./asset/media/5305164_play_video_youtube_youtube logo_icon.png" alt="YouTube icon" />
-            </a>
-            <a href="https://twitter.com">
-                <img class="f-icon" src="./asset/media/5305170_bird_social media_social network_tweet_twitter_icon.png" alt="Twitter icon" />
-            </a>
-            <a href="https://instagram.com">
-                <img class="f-icon" src="./asset/media/5335781_camera_instagram_social media_instagram logo_icon.png" alt="Instagram icon" />
-            </a>
-            <p>
-                <small>Copyright <img id="copyright" src="./asset/media/8664815_copyright_law_icon.png" alt="Copyright icon" /> Curiosity Quiz -
+                <button data-type="restart">Restart</button>
+            </div>
+    </main>
+    <hr>
+    <footer>
+        <a href="https://facebook.com">
+            <img class="f-icon" src="./asset/media/5305153_fb_facebook_facebook logo_icon.png" alt="Facebook icon" />
+        </a>
+        <a href="https://youtube.com">
+            <img class="f-icon" src="./asset/media/5305164_play_video_youtube_youtube logo_icon.png"
+                alt="YouTube icon" />
+        </a>
+        <a href="https://twitter.com">
+            <img class="f-icon" src="./asset/media/5305170_bird_social media_social network_tweet_twitter_icon.png"
+                alt="Twitter icon" />
+        </a>
+        <a href="https://instagram.com">
+            <img class="f-icon" src="./asset/media/5335781_camera_instagram_social media_instagram logo_icon.png"
+                alt="Instagram icon" />
+        </a>
+        <p>
+            <small>Copyright <img id="copyright" src="./asset/media/8664815_copyright_law_icon.png"
+                    alt="Copyright icon" /> Curiosity Quiz -
                 Discovery World, 2022.</small>
-            </p>
-        </footer>
-        <script src="./asset/js/script.js"></script>
-    </body>
+        </p>
+    </footer>
+    <script src="./asset/js/script.js"></script>
+</body>
 </html>
