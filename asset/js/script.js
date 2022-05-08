@@ -8,11 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
                 let name = document.getElementById("name").value;
-                sessionStorage.removeItem("endScore");
-                sessionStorage.removeItem("endCorrect");
-                sessionStorage.removeItem("endIncorrect");
-                sessionStorage.removeItem("pastQ");
-                nextPage(name);
+                console.log(name)
+                if (name == "") {
+                    alert("Player Name is required, please don't forget to field a Player Name.")
+                } else {
+                    sessionStorage.removeItem("endScore");
+                    sessionStorage.removeItem("endCorrect");
+                    sessionStorage.removeItem("endIncorrect");
+                    sessionStorage.removeItem("pastQ");
+                    nextPage(name);
+                }
             } else if (this.getAttribute("data-type") === "A" || this.getAttribute("data-type") === "B" || this.getAttribute("data-type") === "C") {
                 let answer = this.getAttribute("data-type");
                 number++;
@@ -184,9 +189,7 @@ function timeAnswer() {
             time = 15;
             number++;
             checkAnswer(answer);
-        } 
-        console.log("time: "+ time);
-        console.log("second: " + seconds);
+        }
     }
 }
 
