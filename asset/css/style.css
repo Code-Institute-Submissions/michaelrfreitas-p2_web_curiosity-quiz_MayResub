@@ -1,3 +1,6 @@
+/* Default styles for media screen less than 821px */
+
+/* html tag use to determine font and background for the webpage */ 
 html {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: linear-gradient(to right bottom, #89b1be, #6da1aa, #519195, #37807e, #1e7065, #2b7561, #38795c, #467d57, #6e9868, #97b27b, #c2cd91, #eee8a9);
@@ -5,32 +8,38 @@ html {
     height: 100%;
 }
 
+/* header tag use to determine padding size for the header */
 header {
     padding: 1em;
 }
 
+/* h1 tag use to determine font size and text aling */
 h1 {
     font-size: 1.5em;
     text-align: center;
 }
 
+/* center class use to determine text aling and padding size for some divs */
 .center {
     text-align: center;
     padding: 1em;
 }
 
+/* score class use to determine display position, padding size and space between objects for scores */
 .score {
     display: flex;
     padding: 1em;
     justify-content: space-between;
 }
 
+/* count class use to determine display position, padding size and space between objects for count results */
 .count {
     display: flex;
     padding: 1em;
     justify-content: space-evenly;
 }
 
+/* text id use to determine style for the text div in index page as font size, position and text align */
 #text {
     text-align: justify;
     padding: 1em;
@@ -40,6 +49,7 @@ h1 {
     font-size: large;
 }
 
+/* button tag use to determine style for the buttons in the site as color, size and others */
 button {
     padding: 1em;
     padding-left: 3em;
@@ -51,23 +61,27 @@ button {
     font-weight: bold;
 }
 
+/* footer tag use to determine style for the footer with padding size and text align */
 footer {
     padding: 1em;
     text-align: center;
 }
 
+/* f-icon class use to determine style for social media icons in the footer */
 .f-icon {
     padding: 1em;
     width: 40px;
     height: inherit;
 }
 
+/* copyright id use to determine style for the copyright image in the footer */
 #copyright {
     padding: 0;
     width: 15px;
     height: inherit;
 }
 
+/* img tag with attribute to determine size for image answers */
 img#img_a,
 img#img_b,
 img#img_c {
@@ -75,6 +89,7 @@ img#img_c {
     height: 25vw;
 }
 
+/* answer id use to determine position for answers in the quiz page */
 #answer {
     display: flex;
     justify-content: center;
@@ -83,6 +98,7 @@ img#img_c {
     flex-wrap: nowrap;
 }
 
+/* question id use to determine position and size for questions */
 #question {
     display: flex;
     justify-content: center;
@@ -91,6 +107,7 @@ img#img_c {
     padding: 1em;
 }
 
+/* number id use to determine position and size for question number in quiz page */
 #number {
     display: flex;
     justify-content: center;
@@ -99,39 +116,47 @@ img#img_c {
     padding: 1em;
 }
 
+/* img class use to determine size padding and margin in images for quiz page */
 .img {
     padding: 1em;
     margin: 1em;
     margin-bottom: 0;
 }
 
+/* table class use to determine size padding and margin for table in result page */
 .table {
     padding: 2em;
     margin-bottom: 3em;
     padding-bottom: 3em;
 }
 
+/* table tag use to determine position and border for table in result page */
 table {
     border-collapse: collapse;
     border: 1px solid;
     width: 100%;
 }
 
+/* th(table header), td(table column) tags to determine text align and padding size */
 th,
 td {
     text-align: center;
     padding: 6px;
 }
 
+/* tr (table row) tag to determine background color */
 tr:nth-child(even) {
     background-color: #eee8a9;
 }
 
+/* Styles for media scren above 821px */
 @media screen and (min-width: 821px) {
+    /* html tag with height auto to bypass the default height in the background */
     html {
        height: auto;
     }
 
+    /* answer id use to determine reposition for answers in big screens */
     #answer {
         display: flex;
         justify-content: center;
@@ -140,6 +165,7 @@ tr:nth-child(even) {
         flex-wrap: wrap;
     }
 
+    /* img tag with attribute to determine size for image answers with big screens */
     img#img_a,
     img#img_b,
     img#img_c {
@@ -147,10 +173,12 @@ tr:nth-child(even) {
         height: 15vw;
     }
 
+    /* h1 tag use to determine resize in big screens */
     h1 {
         font-size: 3em;
     }
 
+    /* table class use to determine resize table in big screens */
     .table {
         padding: 2em;
         margin: 2em;
@@ -158,6 +186,7 @@ tr:nth-child(even) {
         padding-bottom: 3em;
     }
 
+    /* th(table header), td(table column) tags to determine text align and padding resize in big screens */
     th,
     td {
         text-align: center;
