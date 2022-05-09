@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let name = document.getElementById("name").value;
                 // Check if player not provide a player name show an alert
                 if (name == "") {
-                    alert("Player Name is required, please don't forget to field a Player Name.")
+                    alert("Player Name is required, please don't forget to field a Player Name.");
                 } else { // Else player provide a player name execute actions below
                     // Remove the items from the SessionStorage to avoid repeated values from the previous games
                     sessionStorage.removeItem("endScore");
@@ -63,7 +63,7 @@ async function getQuestions() {
         let res = await fetch("./asset/js/questions.json");
         return await res.json();
     } catch (error) {
-        alert("Ooops! Something's gone wrong. Please, try again later.")
+        alert("Ooops! Something's gone wrong. Please, try again later.");
     }
 }
 
