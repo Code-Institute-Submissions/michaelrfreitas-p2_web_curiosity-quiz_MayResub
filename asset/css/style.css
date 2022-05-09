@@ -5,7 +5,8 @@ html {
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-image: linear-gradient(to right bottom, #89b1be, #6da1aa, #519195, #37807e, #1e7065, #2b7561, #38795c, #467d57, #6e9868, #97b27b, #c2cd91, #eee8a9);
     background-repeat: no-repeat;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
 }
 
 /* header tag use to determine padding size for the header */
@@ -87,6 +88,7 @@ img#img_b,
 img#img_c {
     width: 35vw;
     height: 25vw;
+    object-fit: cover;
 }
 
 /* answer id use to determine position for answers in the quiz page */
@@ -151,11 +153,6 @@ tr:nth-child(even) {
 
 /* Styles for media scren above 821px */
 @media screen and (min-width: 821px) {
-    /* html tag with height auto to bypass the default height in the background */
-    html {
-       height: auto;
-    }
-
     /* answer id use to determine reposition for answers in big screens */
     #answer {
         display: flex;
