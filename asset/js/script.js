@@ -21,20 +21,20 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert("Player Name is required, please don't forget to field a Player Name.")
                 } else { // Else player provide a player name execute actions below
                     // Remove the items from the SessionStorage to avoid repeated values from the previous games
-                    sessionStorage.removeItem("endScore"); 
+                    sessionStorage.removeItem("endScore");
                     sessionStorage.removeItem("endCorrect");
                     sessionStorage.removeItem("endIncorrect");
                     sessionStorage.removeItem("pastQ");
                     // Call fuction nextPage to start the quiz and send name to quiz page
                     nextPage(name);
                 }
-            // Check if the click button get attribute A, B or C and get an answer
+                // Check if the click button get attribute A, B or C and get an answer
             } else if (this.getAttribute("data-type") === "A" || this.getAttribute("data-type") === "B" || this.getAttribute("data-type") === "C") {
                 let answer = this.getAttribute("data-type"); // Variable receive the answer
                 number++; // Plus 1 to number to show the right question number
                 // Function CheckAnswer valitate the correct answer
-                checkAnswer(answer); 
-            // Check if the click button get attribute restart and show an alert
+                checkAnswer(answer);
+                // Check if the click button get attribute restart and show an alert
             } else if (this.getAttribute("data-type") === "restart") {
                 alert("You are starting a new quiz!");
                 // Remove the items from the SessionStorage to avoid repeated values from the previous games
@@ -42,10 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 sessionStorage.removeItem("endCorrect");
                 sessionStorage.removeItem("endIncorrect");
                 sessionStorage.removeItem("pastQ");
-                 // Call fuction nextPage to start a new quiz and send name of the previous game
+                // Call fuction nextPage to start a new quiz and send name of the previous game
                 nextPage(sessionStorage.getItem("name"));
             } else { // Else click in end game before the game completed show an alert
-                alert("Are you sure that you want to end the quiz?");
+                alert("You have click to end this quiz!");
                 // Call function display results
                 displayResult();
             }
@@ -63,7 +63,7 @@ async function getQuestions() {
         let res = await fetch("./asset/js/questions.json");
         return await res.json();
     } catch (error) {
-        console.log(error);
+        alert("Ooops! Something's gone wrong. Please, try again later.")
     }
 }
 
