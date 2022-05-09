@@ -3,10 +3,11 @@
 /* html tag use to determine font and background for the webpage */ 
 html {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-image: linear-gradient(to right bottom, #89b1be, #6da1aa, #519195, #37807e, #1e7065, #2b7561, #38795c, #467d57, #6e9868, #97b27b, #c2cd91, #eee8a9);
+    background-image: linear-gradient(to right bottom, #3bac0a, #379e08, #329007, #2e8206, #297505, #266c05, #236404, #205b04, #1e5504, #1c5004, #1a4a04, #184504);
     background-repeat: no-repeat;
     height: auto;
     min-height: 100%;
+    color:white;
 }
 
 /* header tag use to determine padding size for the header */
@@ -113,7 +114,7 @@ img#img_c {
 #number {
     display: flex;
     justify-content: center;
-    font-size: large;
+    font-size: x-large;
     font-weight: bolder;
     padding: 1em;
 }
@@ -149,6 +150,7 @@ td {
 /* tr (table row) tag to determine background color */
 tr:nth-child(even) {
     background-color: #eee8a9;
+    color:black;
 }
 
 /* Styles for media scren above 821px */
