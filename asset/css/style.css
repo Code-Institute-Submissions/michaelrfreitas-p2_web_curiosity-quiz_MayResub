@@ -34,13 +34,6 @@ h1 {
 .score {
     display: flex;
     padding: 1em;
-    justify-content: space-between;
-}
-
-/* count class use to determine display position, padding size and space between objects for count results */
-.count {
-    display: flex;
-    padding: 1em;
     justify-content: space-evenly;
 }
 

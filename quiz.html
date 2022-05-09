@@ -5,41 +5,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="The Curiosity Quiz is a web quiz that checks your knowledge regarding curiosities in the world. With a lot of questions and 3 choice options to an answer with pictures until 15 secs. You can stimulate your knowledge and play with your friends to know who can get the best score.">
+    <meta name="keywords" content="world, curiosity, quiz-game">
+    <meta name="author" content="Michael Freitas">
     <link rel="stylesheet" href="./asset/css/style.css" />
     <title>Curiosity Quiz</title>
-</head>
+    <link rel="icon" type="image/x-icon" href="./asset/media/favicon.ico">
+</head><!-- Head with meta for SEO and CSS link -->
 
 <body>
     <header>
+        <img id="logo" src="./asset/media/logo.png" alt="Curiosity Quiz Logo.">
         <h1>
             Curiosity Quiz<br /><small><u>Discovery World</u></small>
         </h1>
-    </header>
+    </header><!-- Header with logo and title -->
     <hr>
     <main>
         <div class="score">
             <label for="name">Player name: <b><span id="name"></span></b></label>
         </div>
+        <div class="score">
+            <label for="score">Score: <b><span id="score">0</span></b></label>
+            <label for="time">Time: <b><span id="time"></span></b></label>
+        </div>
         <div>
-        <h2><span id="number">0</span> <span id="question"></span></h2>
-    </div>
+            <h2><span id="number">0</span> <span id="question"></span></h2>
+        </div>
         <div id="answer">
             <button class="img" data-type="A"><img id="img_a"><br><span id="text_a"></span></button>
             <button class="img" data-type="B"><img id="img_b"><br><span id="text_b"></span></button>
             <button class="img" data-type="C"><img id="img_c"><br><span id="text_c"></span></button>
         </div>
         <div class="score">
-            <label for="score">Score: <b><span id="score">0</span></b></label>
-            <label for="time">Time: <b><span id="time"></span></b></label>
-        </div>
-        <div class="count">
             <label for="name">Correct: <b><span id="correct">0</span></b></label>
             <label for="name">Incorrect: <b><span id="incorrect">0</span></b></label>
         </div>
         <div class="center">
             <button data-type="end">End</button>
         </div>
-    </main>
+    </main><!-- Main with details quiz questions and answer options, more details of advancing the quiz game -->
     <hr>
     <footer>
         <a href="https://facebook.com">
@@ -62,8 +68,8 @@
                     alt="Copyright icon" /> Curiosity Quiz -
                 Discovery World, 2022.</small>
         </p>
-    </footer>
-    <script src="./asset/js/script.js"></script>
+    </footer><!-- Footer with social medias links of the website and Copyright -->
+    <script src="./asset/js/script.js"></script><!-- JavaScript script -->
 </body>
 
 </html>
