@@ -5,38 +5,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="The Curiosity Quiz is a web quiz that checks your knowledge regarding curiosities in the world. With a lot of questions and 3 choice options to an answer with pictures until 15 secs. You can stimulate your knowledge and play with your friends to know who can get the best score.">
+    <meta name="keywords" content="world, curiosity, quiz-game">
+    <meta name="author" content="Michael Freitas">
     <link rel="stylesheet" href="./asset/css/style.css" />
     <title>Curiosity Quiz</title>
-</head>
+    <link rel="icon" type="image/x-icon" href="./asset/media/favicon.ico">
+</head><!-- Head with meta for SEO and CSS link -->
 
 <body>
     <header>
+        <img id="logo" src="./asset/media/logo.png" alt="Curiosity Quiz Logo.">
         <h1>
-            Curiosity Quiz<br /><small><u>Discovery World</u></small>
+            <a href="./index.html">Curiosity Quiz<br /><small><u>Discovery World</u></small></a>
         </h1>
-    </header>
+    </header><!-- Header with logo and title -->
     <hr>
     <main>
-            <div class="table">
-                <table>
-                    <tr>
-                        <th>Player name</th>
-                        <th>Correct</th>
-                        <th>Incorrect</th>
-                        <th>Score</th>
-                    </tr>
-                    <tr>
-                        <td id="name"></td>
-                        <td id="endCorrect"></td>
-                        <td id="endIncorrect"></td>
-                        <td id="endScore"></td>
-                    </tr>
-                </table>
-            </div>
-            <div class="center">
-                <button data-type="restart">Restart</button>
-            </div>
-    </main>
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Player name</th>
+                    <th>Correct</th>
+                    <th>Incorrect</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td id="name"></td>
+                    <td id="endCorrect"></td>
+                    <td id="endIncorrect"></td>
+                    <td id="endScore"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="center">
+            <a href="./index.html" class="button">Home</a>
+            <button data-type="restart">Restart</button>
+        </div>
+    </main><!-- Main with table for result of the quiz game, score, name and numbers of correct and incorrect -->
     <hr>
     <footer>
         <a href="https://facebook.com">
@@ -59,7 +66,8 @@
                     alt="Copyright icon" /> Curiosity Quiz -
                 Discovery World, 2022.</small>
         </p>
-    </footer>
-    <script src="./asset/js/script.js"></script>
+    </footer><!-- Footer with social medias links of the website and Copyright -->
+    <script src="./asset/js/script.js"></script><!-- JavaScript script -->
 </body>
+
 </html>

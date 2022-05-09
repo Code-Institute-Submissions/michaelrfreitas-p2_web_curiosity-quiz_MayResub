@@ -19,9 +19,11 @@ header {
 }
 
 /* h1 tag use to determine font size and text aling */
-h1 {
-    font-size: 1.5em;
+h1 a {
+    font-size: 1em;
     text-align: center;
+    text-decoration: none;
+    color:white
 }
 
 /* center class use to determine text aling and padding size for some divs */
@@ -48,15 +50,19 @@ h1 {
 }
 
 /* button tag use to determine style for the buttons in the site as color, size and others */
-button {
-    padding: 1em;
-    padding-left: 3em;
-    padding-right: 3em;
+button, a.button {
+    padding: 16px;
+    padding-left: 48px;
+    padding-right: 48px;
     border-style: solid;
     border-color: black;
     background-color: black;
     color: white;
     font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin:2em;
 }
 
 /* footer tag use to determine style for the footer with padding size and text align */
@@ -174,11 +180,6 @@ tr:nth-child(even) {
     img#img_c {
         width: 25vw;
         height: 15vw;
-    }
-
-    /* h1 tag use to determine resize in big screens */
-    h1 {
-        font-size: 3em;
     }
 
     /* table class use to determine resize table in big screens */
