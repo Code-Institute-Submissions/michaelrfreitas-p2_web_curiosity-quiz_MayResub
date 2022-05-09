@@ -13,6 +13,9 @@ html {
 /* header tag use to determine padding size for the header */
 header {
     padding: 1em;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
 }
 
 /* h1 tag use to determine font size and text aling */
@@ -151,6 +154,14 @@ td {
 tr:nth-child(even) {
     background-color: #eee8a9;
     color:black;
+}
+
+/* logo id to style logo in the pages */
+#logo {
+    width: 30%;
+    max-width: 180px;
+    height: inherit;
+    padding: 1em;
 }
 
 /* Styles for media scren above 821px */
