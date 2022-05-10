@@ -18,7 +18,7 @@ It is a quiz game regarding curiosities in the world. The quiz doesn't have a sp
     
 ## **User Experience/User Interface (UX/UI)**
 
-
+<details>
   <summary>User Experience/User Interface (UX/UI)</summary>
   
 ### **User Stories**
@@ -50,7 +50,7 @@ It is a quiz game regarding curiosities in the world. The quiz doesn't have a sp
 
 <img alt="Site Map" src="./asset/media/flow_cq.png" width="50%">
   
-### **Design**
+  ### **Design**
   
   
   #### Colour Scheme 
@@ -84,7 +84,7 @@ It is a quiz game regarding curiosities in the world. The quiz doesn't have a sp
 <hr>
   
  ## **Features**
-  
+  <details>
   <summary>Features</summary>
   
 ### **Responsive  Website**
@@ -142,7 +142,7 @@ It is a quiz game regarding curiosities in the world. The quiz doesn't have a sp
 <hr>    
       
 ## **Technologies Used**
-
+  <details>
   <summary>Technologies Used</summary>
   
   ### **Dev Languages Used**
@@ -169,13 +169,14 @@ It is a quiz game regarding curiosities in the world. The quiz doesn't have a sp
   - [ColorSpace](https://mycolor.space/) was used to generate a gradient background image.
   - [Colormind](http://colormind.io/) was used to generate a color palette.
   - [ConvertCSV](https://www.convertcsv.com/) was used to convert CSV file to JSON file.
+  - [Lucidchart](https://www.lucidchart.com/) was used to create a user flow and sitemap.
  
 </details>  
   
-    
+<hr>    
       
 ## **Testing**
-
+  <details>
   <summary>Testing</summary>
   
   ### **Lighthouse**
@@ -198,288 +199,196 @@ It is a quiz game regarding curiosities in the world. The quiz doesn't have a sp
    <img alt="Lighthouse Result Page Mobile Test" src="./asset/media/light_result_des.png" width="60%">
 
   ### **W3c CSS Validator**
-  The css file was tested using the W3c CSS validator showing no errors and one warning which concerned the importation of the google font. From what I have learned about this warning from internet research it does not seem to be considered a matter for concern.
+  No errors were found when passing through the official Jigsaw CSS Validator.
   
+  <img alt="W3c CSS Validator" src="./asset/media/w3c_css_validator.png" width="60%"> \
+  [CSS - Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/)
   
-  ![css validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/cssvalidation-pp2.png)
-    
-   The autoprefixer parsed css file was tested using the W3c CSS validator, which showed no errors but produced 58 warnings.  The warning were all of the type "is a vendor extension" as shown below.  
-    
-    
-  ![a picture of the autoprefixer css warnings](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/autoprefixerresult-pp2.png)  
+  ### **W3c HTML Validator**
+  Some errors and warnings have been found when validated the code through official W3C HTML Validator. All of them has been fixed.
   
+  #### Home Page Errors
+  <img alt="W3c HTML Validator errors Home Page" src="./asset/media/errors_html_home_page.png" width="60%">
   
+  #### Home Page No Errors
+  <img alt="W3c HTML Validator no errors Home Page" src="./asset/media/w3c_html_home_validator.png" width="60%">
+
+  #### Quiz Page Errors
+  <img alt="W3c HTML Validator errors Quiz Page" src="./asset/media/errors_html_quiz_page.png" width="60%">
+
+  #### Quiz Page No Errors
+  <img alt="W3c HTML Validator no errors Quiz Page" src="./asset/media/w3c_html_quiz_validator.png" width="60%">
+
+  #### Result Page No Errors
+  <img alt="W3c HTML Validator no errors Result Page" src="./asset/media/w3c_html_result_validator.png" width="60%"> \
+  [HTML - W3C HTML Validator](https://validator.w3.org/)
   
-  
-  
-  ![a picture of the autoprefixer css validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/autofixercssvalidation-pp2.png)
-  
-  #### W3c HTML Validator
-  The HTML was tested with the W3c HTML Validator with no error returned.  
-  
-  
-  ![ a picture of the html validation result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/htmlvalidation-pp2.png)  
-    
-  
-  #### JSHint
+  ### **JSHint**
   The Javascript file was validated using JSHint, with the following result.  The `New JavaScript features (ES6)` option was ticked in the 
   Configure menu. 
-  
-  ![a picture of the jshint result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/jshintvalidation-pp2.png)  
+
+  <img alt="JSHint Validator no errors script.js" src="./asset/media/jshint_checker.png" width="40%">\
+  [JavaScript - JSHint Validator](https://jshint.com/)
     
-    
-  #### WAVE Web Accessibility Evaluation Tool
-  The WAVE tool was used to test the page for accessibility.  The inital result produced 8 contrast errors, these were caused by the colour of the ink used for the times  (orange).  
-    
-  ![ a picture of the initial wave result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/waveinitial-pp2.png)  
-    
-    
-  I changed the ink colour to black, this produced no contrast errors but to me at least was extremely hard to see against the blue background.  
-  
-    
-  ![a picture of the wave result black ink](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/waveblack-pp2.png)  
-    
-    
-  I then decided to check the webpage in two other accessibility checkers namely color.a11y.com and audit.deque.com.  Both of these sites reported no errors so I will use the original orange colour in the deployed site.  
-    
-    
-  ![ a picture of the color.a11y result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/colora11y-pp2.png)  
-     
-    
-    
-  
-    
-  ![ a picture of the audit.deque.com result](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/audit.deque-pp2.png)    
-  
- **Note** the website webaccessability.com was used to test for accessibilty compliance initially, returning a score of 100%, however during my final check of this document I found that that website no longer seem to work so I used the audit.deque website in it's place.  
-  
-    
-    
-  
-    
-    
-  #### Responsiveness
-  Media queries based on screen width were used to ensure the page displayed correctly across a range of screen sizes.
-  the Chrome and Edge browsers were used to test responsiveness.  
-  
-  Breakpoints used are as follows 280px, 375px, 425px, 768px, 1024px, 1440px, 1700px, 1900px and 2100px.  
-  
-  Queries were also implemented for landscape mode (orientation:landscape) at the following 5 breakpoints:  
-  (min-height:250px and max-height:280px),  
-  (min-height:281px and max-height:374px),    
-  (min-height:375px and max-height:424px),  
-  (min-height:425px and max-height:595px),  
-  (min-height:596px and max-height:767px),  
-  (min-height:768px and max-height:850px).
-  
-  The responsive testing tools included within the Google Chrome  and the Edge browsers were used to test these, all display correctly.  
-  
-  I also used the device specific tool within these browsers to test a number of devices representng a wide range of device types.  
-  The results are given below.
-  
-  
-  |Device          |  Result  Portrait           |         Result Landscape      |
-  |----------------|-----------------------------|-------------------------------|
-  | Blackberry Z30 | Displays ok                 | Displays ok                   |
-  | MS Lumia 550   | N/A                         | Displays ok                   |
-  | Nexus 7        | Displays ok                 | Displays ok                   |
-  | iPhone 6/7/8   | Displays ok                 | Displays ok                   |
-  | Galaxy Fold    | Displays ok (single screen) | Displays ok (single screen)   |
-  | Galaxy Fold    | Displays ok (double screen) | Displays ok (double screen)   |
-  | Nest Hub Max   | Displays ok                 | N/A                           |
-  
-  
-  
-    
-   #### Issues Encountered Building The Game
-  A brief summary of some of the difficulties I had building this game and how I attempted to fix them.  
-  
-  
-  I had many problems positioning the two divs I used to make the two-sided card and then to get them to flip satisfactorily.
-  I had to become familiar with many new (to me) css properties such as transform-origin, transform-style, backface-visibility and perspective.
-  
-  I was attempting to build a function using the math random function when I came across the Fisher–Yates shuffle Algorithm on a google search.
-  I used this rather than writing a bespoke function.
-  
-  The next major problem I encountered was within the compare function where the two picked cards are compared.
-  Initially I tried to use the innerText property of the two picked cards as parameters to compare, which worked intermittently, I then used textContent and innerHTML
-  to compare, these worked approximately 75-80% of the time, which I couldn't figure as when the two properties were put through diffchecker
-  they came back as identical.  I then tried to set a data attribute to each card in the populateBehindCards function, I was using the counter (i)
-  to set a attribute for each type of card, when the cards were randomly set from javascript (in the for loop shown below)  
-  
-  
-  `
-        for (let i =0 ; i < scrambledArray.length; i++){
-            behinds[i].innerHTML = cardIcons[scrambledArray[i]];
-        }
-     }
-  `
-  
-  At this point it was pointed out to me that including this in the html would also be possible, this was so much simpler and I used that method.  
-                                                    
-  The tiles were flipping askew due to me having given them both a small padding and margin value.  This issue was easily fixed once I had tracked down what was causing it.   
-                                                    
-                                                    
-  ![a picture of the askew tile](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/askewflippedtile-pp2.png)                                                
-                                                  
-                                                  
-  
+  ### **WAVE Web Accessibility Evaluation Tool**
+  The WAVE tool was used to test the page for accessibility. No errors.
+
+  #### Home Page
+  <img alt="WAVE Validator no errors home" src="./asset/media/wave_home.png" width="40%">
+
+  #### Quiz Page
+  <img alt="WAVE Validator no errors quiz" src="./asset/media/wave_quiz.png" width="40%">
+
+  #### Result Page  
+  <img alt="WAVE Validator no errors result" src="./asset/media/wave_result.png" width="40%">\
+  [Accessibility - WAVE](https://wave.webaim.org/)
 
   
     
- #### Manual Testing for Bugs
-  When I had the game working I set about using it with a view to identifying any possible flaws in the logic or a combination of user actions which would
-  cause the program to fail. To this end I played the game through numerous times checking for expected outcomes and noting in which situations a fault occured.
-  I also cycled through the various screen sizes and noted any mis-alignment of elements on the screen.  
-                                                  
+  ### **Responsiveness**
+  Media queries based on screen width were used to ensure the page displayed correctly across a range of screen sizes.
+  the Chrome and Edge browsers were used to test responsiveness.  
   
-  Then I methodically worked through the list of faults and corrected the code to solve each bug.  
-                                                  
+  The responsive testing tools included within the Google Chrome  and the Edge browsers were used to test these, all display correctly.  
   
-  Some of the faults are listed here along with how I fixed them.
-                                                  
-  - There were many faults with the appearance of the game and these were corrected with CSS properties.
-  - The Instruction Page was not retracting up completely out of view at certain screen sizes (length), solved by re-positioning using the top property.
-  - All the cards should be 'unclickable' while the game was not being played.  If a user randomly clicked on cards before the first play through, then
-    these cards would be out of synch with the remainder and would show the wrong face during play. I set the pointerEvent property of the cards elements to 'none'
-    until the start button was clicked.
-  - Once a card had been turned it should be unclickable untill another card had been turned and the comparison made.  I set the pointerEvents property
-    for that card to "none" within the turncard function leaving it this way until the second card had been turned and just before the compare function was called.
-  - When a match was made the two matched cards needed to be made 'unclickable' for the rest of the game cycle. I used the pointerEvents property also for this.
-  - During the one second gap between two un-matched cards being re-turned back down, the player should not be able to click another un-turned card.
-    It was not possible to use the pointerEvents property for this as it re-set the pointerEvents property of the matched pairs already found.  To solve this I declared a           variable 'freezeOut' set to false.  I put this in an if statement in the turncard function which returned from the function immediately if true.  I could then set freezeOut     to the appropriate value depending on game state.  
+  * I also used the device specific tool within these browsers to test a number of devices representng a wide range of device types:
+  
+    * Apple:
+      * Ipad mini
+      * Iphone 7
+      * Iphone 11
+      * Iphone 12
+      * Iphone 13 Pro Max
+
+    * Desktops/laptops:
+      * Dell XPS15 9570 Laptop
+      * MacBook Air
+ 
+    * Browsers:
+      * Chrome
+      * Edge
+      * Firefox
+      * Safari
   
   
-   `function turnCard(){
-    if(freezeOut){                //prevents user clicking on card during 1 second delay before unmatched cards are re-turned
-    return;
-    }
-   `
-  
-  - If a player pressed the start button mid-game ie. before the victory function had been called it caused the timer to run at double speed.  This was fixed by resetting the 
-    timer as the first action in the startGame function.  
-  - If a player pressed the start button mid game with only one unmatched card turned, the matching algorithm would not work due to the `firstItemClicked` variable 
-    being the wrong value.  I set this to true at the start of the startGame function which solved the issue.  
-  - The time shown in the timer area at game finish would often differ from the time shown in the modal screen by one second.  This was fixed by moving the stopclock function       call to before the call to the showmodal function in the victory function.  
+    
+   ### **Issues Encountered Building The Quiz Game**
+   I had difficulty keeping the details stored for use on the next page or game session. Examples: name, score and other details that I need to keep the game running. I'm using sessionStorange function to solve it. 
+   
+   Another issue was to store the questions in the system without using a proper database and find an answer with the questions and validate the correct answer after using the random created for questions and answers position. I'm using JSON to store the questions with options for the answers and correct answers then I'm using the sessionStorage to get the position and validate it doesn't matter what position the correct answer is.
                                                   
                                                     
-                                                    
-   #### Testing game for achievement of User Goals.  
+   ### **Testing for achievement of User Goals**
+
+   All pages have been tested across all screen sizes for a responsive experience and web pages have been Styled accordingly.
+   
+   During this time I realised I made some silly mistakes mainly with sizing and had to go back through and change some size values to work correctly.
+   
+   Once testing was completed and I was happy with the result I used validators to ensure my code was up to standard and best practices. I did this using W3C validator for HTML, Jigsaw Validator for CSS, WAVE (Web Accessibility Evaluation Tool) and Lighthouse in Google Chrome.
+   
+   All images are responsive.
   
   
   |                       Goal                                              |                          Outcome                                                               |
   |-------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
-  |The rules and final aim of the game to be obvious.                       |Instruction Page button prominently displayed.                                                  |
-  |To be entertained and engaged with the game from the initial load.       |Colour,sound and animation used in an effort to engage user.                                    |
-  |The game to function correctly and gameplay to be intuitive.             |No logic errors in code, sound used to signal correct/incorrect flips.                          |
-  |To be able to play the game on various different devices.                |Media queries used to make game accessible across a range of devices.                           |
-  |To be able to gauge/score my performance.                                |Timer function and Best time function meets this need.                                          |
-  |To be able to challenge myself by increasing difficulty of the game.     |Easy/Hard difficulty toggle options provided.                                                   |
-  |To be able to play the game on various different devices.                |Media queries used to make game accessible across a range of devices.                           |
-  |To be able to mute music/sound effects if so desired.                    |Music and sounds are optional, changed via the Instruction/option page.                         |
-  |To provide a fun game.                                                   |Colour,sound and animation used in an effort to engage user.                                    |
-  |To provide a game to stimulate mental function.                          |Game play requires attention and focus.                                                         |
-  |To encourage continued use of the game.                                  |Colour,sound and animation used in an effort to entertain user and encourage continued use.     |
-   
-    
-    
- #### Automated Testing
-  I did not have the expertise to use a unit-testing framework such as Jasmine or Jest.   
-    
-    
- #### Issues Remaining (Known to me)
- There is a very small lag between the start button being clicked and the timer starting.  This issue appeared when I put the timer reset code in the startGame function
- to handle the problem of the timer running too fast.  
- 
- It may have been preferable to have the music/sound effects toggle icons visible at all times, but the games are short enough that it should not be an issue for anybody.  
-  
- When a user clicks on the Easy/Hard button in order to change difficulty, the display is not up-dated with the extra/lesser amount of cards untill the start button is clicked and the game 
- begins. This has no adverse effect on game-play but it may have been better from a UX point of view to have the changes displayed straight away to confirm the players        actions.  
-  
+  |Validated if don't put a name in player name.                            |The game show me a alert to add a name as required.                                             |
+  |Tested End button in Quiz Page.                                          |Send the user to Result Page with the last score, the user has got.                             |
+  |Validated all rules regarding time, scores and answers.                  |When correct extra time added to the next question and 10 points increase.                      |
+  |Validated if the details are showing in the result page is true.         |Name and details regarding score, correct and incorrect questions are showing right in the end. |
+  |Time is running correct and incriase in the correct moment.              |Showing the new time correct in the next question depend of the previous answer.                |
+     
+     
+  ### **Unfixed Bugs**
+
+  No bugs identified that needs to be fixed.
+
+  I would like more time for increase the database questions and create a ranking for players in the same session.
   
   
   </details>
     
-# Deployment
+<hr>
+
+## **Deployment**
   <details>
-    
   <summary>Deployment</summary>
   
-  This project was built on the Gitpod IDE using the Code Institute template found here:<br>https://github.com/Code-Institute-Org/gitpod-full-template
-      
-  
+  This project was built on the GitPod IDE using the Code Institute template found here:<br>https://github.com/Code-Institute-Org/gitpod-full-template
     
-#### GitHub Pages
-   
-  GitHub Pages is a static site hosting service which uses files from a GitHub repository to publish a website.  I used Github Pages to deploy this project
-    following the process set out below.  
-    
-  1. Open the Github repository page you wish to publish, in this case [Here](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/).
-  1. Click on the 'Settings' option from the list of options above the repo contents.
-  1. Scroll down the page untill the Github Pages heading appears and click on the link 'Check it out here!".
-  1. Select Branch Main and leave /root unchanged.
-  1. Click 'Save'.
-  1. The URL for the website will be shown in a panel towards the top of the page.  After a brief wait it will turn green indicating the website is published.
-    
-  ![ghpages-published](https://github.com/bobshort4bobby4/Flipping-Tiles-Game-PP2/blob/main/assets/media/readmeimages/githubpages.png) 
- 
-#### Forking
-  Forking a Github repository is the the process of making a copy of any repository that you can use without affecting the original, this original is known as the 
-  "upstream repository".
-  The process for forking a repository is set out below.
-  1. Go to the Github page that hosts the repository you wish to fork.
-  1. On the top-right of the page there is a button "Fork".
-  1. Click this button.
-  1. This creates a repository in your Github home page which is a copy of the original. You can submit and receive changes to the code by using pull requests 
-  and/or syncing with the upstream repository.
-    
-  (Taken from the Github Docs guide "Forking Projects")
-    
-#### Cloning 
-  Cloning a repository involves making a full copy of that repository on your local machine. This makes working on the code easier.  Changes can be pushed back up to the 
-  GitHub site or changes from other sources pulled to your local copy. To make a clone follow the process below.
-  1. Goto the repository page on GitHub.
-  1. Above the file list click on the green button titled "Code".
-  1. You can choose to download a zip file of the repository, unpack it on your local machine and open it in your IDE or,
-  1. Clone using HTTPS by copying the URL under the HTTPS tab.
-  1. Open a terminal window, set current directory to the one you want to contain the clone.
-  1. Type `git clone `and paste the URL copied from the GitHub page.
-  1. The repository clone will be created on your machine.
-    
-  (Taken from the Github Docs guide "Cloning a repository")
-    
+### **Creating My Website**
+To create this project I used the Code Institute Gitpod Full Template by navigating [here](https://github.com/Code-Institute-Org/gitpod-full-template) and clicking the button labelled 'Use this template'.
+
+Next I was directed to the 'create new repository from template page' and entered in my repo name, then clicked create repository from template button.
+
+The commands used for commits throughout the project:
+
+git add filename - This command was used to add files to the staging area before committing.
+git commit -m "commit message explaining the updates" - This command was used to to commit changes to the local repository.
+git push - This command is used to push all committed changes to the GitHub repository.
+
+### **GitHub Pages**
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/michaelrfreitas/p2_web_curiosity-quiz)
+
+2. At the top of the Repository (NOT at the top of page), locate the "Settings" Button on the menu.
+
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+
+4. Under "Source", click the dropdown called "None" and select "Master Branch".
+
+5. Click Save and the page will automatically refresh.
+
+6. Scroll back down through the page to locate the now published site link in the "GitHub Pages" section. [Link](https://michaelrfreitas.github.io/p2_web_curiosity-quiz/)
+
+### **Forking**
+Forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea. - This is the definition from Github Docs.
+
+1. Navigate to the GitHub Repository you want to fork.
+
+2. On the top right of the page under the header, click the fork button.
+
+3. Fork
+
+4. This will create a duplicate of the full project in your GitHub Repository.
+
+### **Clone**
+
+1. Navigate to the Github Repository you want to clone.
+
+2. Click the drop down menu labelled "Clone".
+
+3. Either Download the ZIP file, unpackage locally and open with IDE (This route ends here) OR Copy Git URL from the HTTPS dialogue box.
+
+4. Open your developement editor and open a terminal window in a directory of your choice.
+
+5. Use the 'git clone' command in terminal followed by the copied git URL.
+
+6. A clone of the project will be created locally on your local machine.
+
   </details>
     
+<hr>
 
-
-# Credits
-  <details>
+## **Credits**
+<details>
   <summary>Credits</summary>
  
-  #### Images
-  The Background image was downloaded from  [Public Domain Pictures](https://www.publicdomainpictures.net/en/view-image.php?image=307680&picture=blue-maze-background)  
-  The font used was taken from [Google Fonts](https://fonts.google.com/)  
-  The icons were downloaded from [FontAwesome](https://www.fontawesome.com)  
-    
-  #### Music/Sound FX
-  Music was sourced at [opengameart.org](https://www.opengameart.org)  
-  Remaining sound effects were downloaded from [Freesound.org](https://www.freesound.org)  
-  All sounds are free to use.
+  ### **Images**
+  The answer images were downloaded from:
+
+  - [Unsplash](https://unsplash.com/)
+  - [Wikipedia](https://en.wikipedia.org)
+  - [Wikimedia](https://commons.wikimedia.org)
+  - [Social Media Icons](https://www.iconfinder.com/social-media-icons)
  
-  #### Code/Reference 
-  The method of placing two identical divs on top of each other using different display properties, I learned from a You-Tube video by [Shaun Pelling](https://www.youtube.com/watch?v=QhKdOrOh90w&list=PL4cUxeGkcC9iGYgmEd2dm3zAKzyCGDtM5&index=13&t=401s).  
-  I referenced this video by [freecodecamp.org](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=1697s) to help me get the flipping animation working properly and some aspects of     program flow.  
-  I used [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio) to learn about the use of the Audio constructor.  
-  The [w3 schools](https://www.w3schools.com/jsref/default.asp) website was also used particularly in relation to element attributes and how best to set them.  
-  I referenced the Fisher–Yates shuffle algorithm at [Wikipedia](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle).  
-  I learned the method for adding a leading 0 to one digit time values at [TechnicalCafe](https://www.youtube.com/watch?v=1INmsFnD-u4&t=59s).  
-  I used the [Udemy](https://www.udemy.com/course/modern-javascript-from-novice-to-ninja) "Modern Javascript" course for information regarding Modal screens, 
-  event delegation and arrow functions.  
+  ### **Code/Reference** 
+  I used [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement/Audio) to learn about JavaScript reference for JSON.  
+  The [W3Schools](https://www.w3schools.com/jsref/default.asp) website was also used particularly in relation to element attributes and how the best practice to set them.    
   The [Code Institute](https://www.CodeInstitute.net) course material.
   
   
-  #### Thanks
-  Thank you to my Mentor Mr. Ben Kavanagh and to the Code Institute tutor who pointed me in the right direction regarding which parameters to use when comparing two elements.  
+  ### **Acknowledgment**
+  I'd like to say thank you my mentor [Benjamin Kavanagh](https://github.com/BAK2K3) for his guidance and support throughout my project.
   
     
   </details>
